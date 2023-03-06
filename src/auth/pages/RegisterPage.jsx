@@ -11,26 +11,26 @@ export const RegisterPage = () => {
 
         <Grid item xs={ 12 } sx={{ mt: 2 }}>
             <TextField
-              label="Complete Name"
-              type="text"
-              placeholder="Complete Name"
+              label       ="Complete Name"
+              type        ="text"
+              placeholder ="Complete Name"
               fullWidth
             />
           </Grid>
 
           <Grid item xs={ 12 } sx={{ mt: 2 }}>
             <TextField
-              label="Email"
-              type="email"
-              placeholder="correo@gmail.com"
+              label       ="Email"
+              type        ="email"
+              placeholder ="correo@gmail.com"
               fullWidth
             />
           </Grid>
           <Grid item xs={ 12 } sx={{ mt: 2 }}>
             <TextField
-              label="Password"
-              type="password"
-              placeholder="Password"
+              label       ="Password"
+              type        ="password"
+              placeholder ="Password"
               fullWidth
             />
           </Grid>
