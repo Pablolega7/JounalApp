@@ -1,6 +1,6 @@
+import React from "react";
 import { Toolbar } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
 import { NavBar } from "../components/NavBar";
 import { SideBar } from "../components/SideBar";
 
