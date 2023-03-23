@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { Button, Grid, TextField, Typography, Link } from "@mui/material";
 import { AuthLayout } from "../layout/AuthLayout";
 import { useForm } from "../../hooks";
-
+import { startCreatingUserEmailPassword } from "../../store/auth";
 
 const formData = {
   displayName : "",
@@ -19,13 +20,15 @@ const formData = {
 };
 
 export const RegisterPage = () => {
-  const [formSubmitted, setformSubmitted] = useState( false )
+  const dispatch                                                                                                             = useDispatch();
+  const [formSubmitted, setformSubmitted]                                                                                    = useState( false )
   const { displayName, email, password, onInputChange, formState, displayNameValid, emailValid, passwordValid, isFormValid } = useForm( formData, validatesForm );
 
   const onSubmit = ( e ) => {
     e.preventDefault();
     setformSubmitted( true );
-    console.log( formState );
+    if ( !isFormValid ) return
+    dispatch( startCreatingUserEmailPassword( formState ) );
   };
 
   return (
